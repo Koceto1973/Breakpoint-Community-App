@@ -19,7 +19,7 @@
 		351A6264219E11C3003D343A /* Breakpoint-Community-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breakpoint-Community-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		351A6267219E11C3003D343A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		351A6269219E11C3003D343A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		351A626B219E11C3003D343A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		351A626B219E11C3003D343A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ../SecondViewController.swift; sourceTree = "<group>"; };
 		351A626E219E11C3003D343A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		351A6270219E11C4003D343A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		351A6273219E11C4003D343A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 				351A627E219E1228003D343A /* Model */,
 				351A627D219E121C003D343A /* View */,
 				351A627C219E1210003D343A /* Controller */,
+				351A6281219E13DF003D343A /* Services */,
 				351A627B219E11FE003D343A /* Extensions */,
-				351A626B219E11C3003D343A /* SecondViewController.swift */,
 				351A626D219E11C3003D343A /* Main.storyboard */,
 				351A6270219E11C4003D343A /* Assets.xcassets */,
 				351A6272219E11C4003D343A /* LaunchScreen.storyboard */,
@@ -81,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				351A6269219E11C3003D343A /* FirstViewController.swift */,
+				351A626B219E11C3003D343A /* SecondViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -97,6 +98,13 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		351A6281219E13DF003D343A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
