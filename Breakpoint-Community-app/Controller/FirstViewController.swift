@@ -9,7 +9,8 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    @IBOutlet weak var emailField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

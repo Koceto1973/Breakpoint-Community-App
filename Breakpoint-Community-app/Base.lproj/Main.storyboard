@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o4P-Lf-Yeu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--View Controller-->
+        <!--AuthVC-->
         <scene sceneID="oha-C6-Qm3">
             <objects>
-                <viewController id="o4P-Lf-Yeu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthVC" id="o4P-Lf-Yeu" customClass="AuthVC" customModule="Breakpoint_Community_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RIV-Po-LYH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,7 +111,7 @@
                                 <color key="textColor" red="0.5607843137254902" green="0.81176470588235294" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBZ-I6-rJT">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBZ-I6-rJT" customClass="ShadowView" customModule="Breakpoint_Community_app" customModuleProvider="target">
                                 <rect key="frame" x="17" y="153" width="340" height="360"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gvm-g9-uuk">
@@ -190,10 +190,10 @@
             </objects>
             <point key="canvasLocation" x="-1399" y="-54"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="rEu-Rb-hj1">
             <objects>
-                <viewController id="eoz-c2-v9X" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="eoz-c2-v9X" customClass="LoginVC" customModule="Breakpoint_Community_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="adL-Zz-jH9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,7 +220,7 @@
                                     <color key="titleColor" red="0.015686274510000001" green="0.5450980392" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9T-dZ-05M">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9T-dZ-05M" customClass="InsetTextField" customModule="Breakpoint_Community_app" customModuleProvider="target">
                                 <rect key="frame" x="20" y="211" width="335" height="50"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -230,7 +230,7 @@
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uDP-Pi-60q">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uDP-Pi-60q" customClass="InsetTextField" customModule="Breakpoint_Community_app" customModuleProvider="target">
                                 <rect key="frame" x="20" y="141" width="335" height="50"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -258,6 +258,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YHq-da-xCv"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="uDP-Pi-60q" id="wru-J8-gO9"/>
+                        <outlet property="passwordField" destination="M9T-dZ-05M" id="a1N-Vh-Fwz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rn0-B5-ILa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,6 +16,10 @@
 		351A6274219E11C4003D343A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351A6272219E11C4003D343A /* LaunchScreen.storyboard */; };
 		351A6283219E18C1003D343A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 351A6282219E18C1003D343A /* GoogleService-Info.plist */; };
 		351A6285219E1E55003D343A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351A6284219E1E55003D343A /* DataService.swift */; };
+		351A6287219F15F9003D343A /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351A6286219F15F9003D343A /* AuthVC.swift */; };
+		351A6289219F1615003D343A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351A6288219F1615003D343A /* LoginVC.swift */; };
+		351A628B219F1760003D343A /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351A628A219F1760003D343A /* InsetTextField.swift */; };
+		35605577219F60B300C284A9 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35605576219F60B300C284A9 /* ShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		351A6275219E11C4003D343A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		351A6282219E18C1003D343A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		351A6284219E1E55003D343A /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		351A6286219F15F9003D343A /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		351A6288219F1615003D343A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		351A628A219F1760003D343A /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
+		35605576219F60B300C284A9 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		4A5BE1AA2DBA12E3B980EE82 /* Pods-Breakpoint-Community-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakpoint-Community-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breakpoint-Community-app/Pods-Breakpoint-Community-app.release.xcconfig"; sourceTree = "<group>"; };
 		6458900038F68AFB895C0B0D /* Pods_Breakpoint_Community_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakpoint_Community_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +102,8 @@
 			children = (
 				351A6269219E11C3003D343A /* FirstViewController.swift */,
 				351A626B219E11C3003D343A /* SecondViewController.swift */,
+				351A6286219F15F9003D343A /* AuthVC.swift */,
+				351A6288219F1615003D343A /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -101,6 +111,8 @@
 		351A627D219E121C003D343A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				351A628A219F1760003D343A /* InsetTextField.swift */,
+				35605576219F60B300C284A9 /* ShadowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,9 +268,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				351A6287219F15F9003D343A /* AuthVC.swift in Sources */,
 				351A626C219E11C3003D343A /* SecondViewController.swift in Sources */,
+				351A6289219F1615003D343A /* LoginVC.swift in Sources */,
 				351A6268219E11C3003D343A /* AppDelegate.swift in Sources */,
+				35605577219F60B300C284A9 /* ShadowView.swift in Sources */,
 				351A626A219E11C3003D343A /* FirstViewController.swift in Sources */,
+				351A628B219F1760003D343A /* InsetTextField.swift in Sources */,
 				351A6285219E1E55003D343A /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
