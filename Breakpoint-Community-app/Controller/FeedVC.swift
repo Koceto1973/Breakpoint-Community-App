@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FeedVC: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     
     override func viewDidLoad() {
