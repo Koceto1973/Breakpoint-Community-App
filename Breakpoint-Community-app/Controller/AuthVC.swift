@@ -6,30 +6,32 @@
 //  Copyright © 2018 K.K. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import Firebase
 
-class AuthVC: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+class AuthService {
+    static let instance = AuthService()
+    
+    func registerUser(withEmail email: String, andPassword password: String, userCreationComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            guard let user = user else {
+                userCreationComplete(false, error)
+                return
+            }
+                        // email / FB / G+
+            let userData = ["provider": user.user.providerID, "email": user.user.email]
+            DataService.instance.createDBUser(uid: user.user.uid, userData: (userData as AnyObject) as! Dictionary<String, Any>)
+            userCreationComplete(true, nil)
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func loginUser(withEmail email: String, andPassword password: String, loginComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if error != nil {
+                loginComplete(false, error)
+                return
+            }
+            loginComplete(true, nil)
+        }
     }
-    */
-
 }
