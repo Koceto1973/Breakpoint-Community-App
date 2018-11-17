@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,13 +59,54 @@
                                 <rect key="frame" x="0.0" y="90" width="375" height="528"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="266-Ka-NSu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="266-Ka-NSu" customClass="FeedCell" customModule="Breakpoint_Community_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="266-Ka-NSu" id="Zfw-b2-oBZ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="cUC-pq-r58">
+                                                    <rect key="frame" x="25" y="21" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="R4N-oi-7Cy"/>
+                                                        <constraint firstAttribute="height" constant="50" id="b8u-Oe-OCO"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" user@breakpoint.org" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7N-Me-yRX">
+                                                    <rect key="frame" x="85" y="21" width="265" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="aTY-ty-WzY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" _user_post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zT3-9b-TD5">
+                                                    <rect key="frame" x="85" y="46" width="265" height="40"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="10"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="A7N-Me-yRX" secondAttribute="trailing" constant="10" id="8kR-kU-Xoc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zT3-9b-TD5" secondAttribute="bottom" constant="3" id="Dx8-BP-Yj0"/>
+                                                <constraint firstItem="cUC-pq-r58" firstAttribute="top" secondItem="Zfw-b2-oBZ" secondAttribute="topMargin" constant="10" id="EPf-Yf-K4e"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zT3-9b-TD5" secondAttribute="trailing" constant="10" id="FZY-YL-qfh"/>
+                                                <constraint firstItem="A7N-Me-yRX" firstAttribute="leading" secondItem="cUC-pq-r58" secondAttribute="trailing" constant="10" id="Hnd-Lk-mTs"/>
+                                                <constraint firstItem="A7N-Me-yRX" firstAttribute="top" secondItem="Zfw-b2-oBZ" secondAttribute="topMargin" constant="10" id="VLt-pB-z5q"/>
+                                                <constraint firstItem="zT3-9b-TD5" firstAttribute="top" secondItem="Zfw-b2-oBZ" secondAttribute="topMargin" constant="35" id="eAc-XT-dpJ"/>
+                                                <constraint firstItem="cUC-pq-r58" firstAttribute="leading" secondItem="Zfw-b2-oBZ" secondAttribute="leadingMargin" constant="10" id="uVZ-Op-TwY"/>
+                                                <constraint firstItem="zT3-9b-TD5" firstAttribute="leading" secondItem="cUC-pq-r58" secondAttribute="trailing" constant="10" id="wFT-OR-OQl"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.16078431372549018" green="0.14509803921568626" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="contentLbl" destination="zT3-9b-TD5" id="mBv-7G-C1B"/>
+                                            <outlet property="emailLbl" destination="A7N-Me-yRX" id="hHh-12-OT8"/>
+                                            <outlet property="profileImage" destination="cUC-pq-r58" id="Frc-bo-pyZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -85,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
         <!--Create PostVC-->
         <scene sceneID="9GZ-rZ-b04">
