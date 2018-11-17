@@ -25,7 +25,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             AuthService.instance.loginUser(withEmail: emailField.text!, andPassword: passwordField.text!, loginComplete: { (success, loginError) in
                 if success {
                     self.dismiss(animated: true, completion: nil)
-                    self.present(Show.Alert(with : "Successfully logged in user"), animated: true, completion: nil)
+                    print("Successfully logged in user")
                 } else {
                     print(String(describing: loginError?.localizedDescription))
                     self.present(Show.Alert(with : "Unsuccessfully logged in user"), animated: true, completion: nil)
@@ -39,7 +39,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             AuthService.instance.registerUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, userCreationComplete: { (success, registrationError) in
                 if success {
                     self.dismiss(animated: true, completion: nil)
-                    self.present(Show.Alert(with : "Successfully signed up user"), animated: true, completion: nil)
+                    print("Successfully signed up user")
                 } else {
                     print(String(describing: registrationError?.localizedDescription))
                     self.present(Show.Alert(with : "Unsuccessfully signed up user"), animated: true, completion: nil)
