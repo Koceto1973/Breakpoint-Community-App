@@ -19,7 +19,7 @@ class CreatePostVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.delegate = self
-        //sendBtn.bindToKeyboard()
+        sendBtn.bindToKeyboard()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +50,10 @@ class CreatePostVC: UIViewController {
 extension CreatePostVC: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = ""
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
 

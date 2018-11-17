@@ -24,6 +24,7 @@
 		3560557B219F94B600C284A9 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560557A219F94B600C284A9 /* AlertVC.swift */; };
 		3560557D219F9F1600C284A9 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560557C219F9F1600C284A9 /* MeVC.swift */; };
 		3560557F219FBA4800C284A9 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560557E219FBA4800C284A9 /* CreatePostVC.swift */; };
+		35605581219FC7F900C284A9 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35605580219FC7F900C284A9 /* UIViewExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		3560557A219F94B600C284A9 /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
 		3560557C219F9F1600C284A9 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		3560557E219FBA4800C284A9 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
+		35605580219FC7F900C284A9 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		4A5BE1AA2DBA12E3B980EE82 /* Pods-Breakpoint-Community-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakpoint-Community-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breakpoint-Community-app/Pods-Breakpoint-Community-app.release.xcconfig"; sourceTree = "<group>"; };
 		6458900038F68AFB895C0B0D /* Pods_Breakpoint_Community_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakpoint_Community_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 		351A627B219E11FE003D343A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				35605580219FC7F900C284A9 /* UIViewExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35605581219FC7F900C284A9 /* UIViewExt.swift in Sources */,
 				351A6287219F15F9003D343A /* AuthVC.swift in Sources */,
 				351A626C219E11C3003D343A /* GroupsVC.swift in Sources */,
 				351A6289219F1615003D343A /* LoginVC.swift in Sources */,
