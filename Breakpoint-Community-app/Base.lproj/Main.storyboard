@@ -263,6 +263,123 @@
             </objects>
             <point key="canvasLocation" x="-1399" y="-54"/>
         </scene>
+        <!--Me-->
+        <scene sceneID="hf3-GU-Z1Q">
+            <objects>
+                <viewController id="L7i-pD-Geb" customClass="MeVC" customModule="Breakpoint_Community_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cVK-ed-d1e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4j9-C2-1gI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GnP-sc-ffi">
+                                        <rect key="frame" x="325" y="30" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="6rU-hS-gcQ"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="GUZ-0I-Zmn"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="KXi-N9-Ab8"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="30" id="Vzz-US-1GF"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="fts-eO-TD0"/>
+                                            <constraint firstAttribute="height" constant="30" id="j64-Yh-eKV"/>
+                                        </constraints>
+                                        <state key="normal" image="logoutIcon"/>
+                                        <connections>
+                                            <action selector="logOutBtnPressed:" destination="L7i-pD-Geb" eventType="touchUpInside" id="Kko-YC-E8W"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbe-QS-6LF">
+                                        <rect key="frame" x="171" y="35" width="33" height="21"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                        <color key="textColor" red="0.22047906140000001" green="1" blue="0.32262097750000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GnP-sc-ffi" secondAttribute="trailing" constant="20" id="3KJ-sU-PDf"/>
+                                    <constraint firstItem="mbe-QS-6LF" firstAttribute="centerY" secondItem="GnP-sc-ffi" secondAttribute="centerY" id="Ml6-7h-n4n"/>
+                                    <constraint firstItem="mbe-QS-6LF" firstAttribute="centerX" secondItem="4j9-C2-1gI" secondAttribute="centerX" id="SMX-v7-Jlb"/>
+                                    <constraint firstItem="GnP-sc-ffi" firstAttribute="top" secondItem="4j9-C2-1gI" secondAttribute="top" constant="30" id="YRJ-t8-7WL"/>
+                                    <constraint firstItem="mbe-QS-6LF" firstAttribute="centerY" secondItem="GnP-sc-ffi" secondAttribute="centerY" id="ghR-BK-rkt"/>
+                                    <constraint firstAttribute="height" constant="70" id="vA3-vA-g1h"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bw6-dl-Cop">
+                                <rect key="frame" x="0.0" y="90" width="375" height="275"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="6Ln-Xk-2vL">
+                                        <rect key="frame" x="137" y="30" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="K6A-fK-EkB"/>
+                                            <constraint firstAttribute="width" constant="100" id="sGD-nK-mSr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@breakpoint.org" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEG-WZ-F97">
+                                        <rect key="frame" x="65" y="150" width="245" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="lzq-3Y-nOU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.015686274510000001" green="0.5450980392" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="5C2-hk-qjE"/>
+                                    <constraint firstItem="6Ln-Xk-2vL" firstAttribute="centerX" secondItem="bw6-dl-Cop" secondAttribute="centerX" id="5ec-Pk-zFp"/>
+                                    <constraint firstItem="NEG-WZ-F97" firstAttribute="leading" secondItem="bw6-dl-Cop" secondAttribute="leading" constant="65" id="chX-9G-hyc"/>
+                                    <constraint firstAttribute="trailing" secondItem="NEG-WZ-F97" secondAttribute="trailing" constant="65" id="gFu-mq-a9w"/>
+                                    <constraint firstItem="6Ln-Xk-2vL" firstAttribute="top" secondItem="bw6-dl-Cop" secondAttribute="top" constant="30" id="gI5-IB-LWA"/>
+                                    <constraint firstItem="NEG-WZ-F97" firstAttribute="top" secondItem="6Ln-Xk-2vL" secondAttribute="bottom" constant="20" id="xGV-JO-gjn"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wP8-uS-qp0">
+                                <rect key="frame" x="0.0" y="365" width="375" height="253"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="ypV-N1-XxB">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ypV-N1-XxB" id="jGD-7Y-pvY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="he0-TI-SqM" firstAttribute="trailing" secondItem="wP8-uS-qp0" secondAttribute="trailing" id="07r-NC-1qa"/>
+                            <constraint firstItem="4j9-C2-1gI" firstAttribute="trailing" secondItem="he0-TI-SqM" secondAttribute="trailing" id="90p-Lz-200"/>
+                            <constraint firstItem="he0-TI-SqM" firstAttribute="bottom" secondItem="wP8-uS-qp0" secondAttribute="bottom" id="Ars-09-cNn"/>
+                            <constraint firstItem="4j9-C2-1gI" firstAttribute="trailing" secondItem="he0-TI-SqM" secondAttribute="trailing" id="JLT-jK-tnR"/>
+                            <constraint firstItem="bw6-dl-Cop" firstAttribute="top" secondItem="4j9-C2-1gI" secondAttribute="bottom" id="MXD-Lo-PDj"/>
+                            <constraint firstItem="4j9-C2-1gI" firstAttribute="leading" secondItem="he0-TI-SqM" secondAttribute="leading" id="SZ3-Wh-1Gv"/>
+                            <constraint firstItem="4j9-C2-1gI" firstAttribute="top" secondItem="he0-TI-SqM" secondAttribute="top" id="Urk-bA-wuM"/>
+                            <constraint firstItem="wP8-uS-qp0" firstAttribute="leading" secondItem="he0-TI-SqM" secondAttribute="leading" id="bfG-aV-9BF"/>
+                            <constraint firstItem="bw6-dl-Cop" firstAttribute="leading" secondItem="he0-TI-SqM" secondAttribute="leading" id="gCQ-ET-tNw"/>
+                            <constraint firstItem="he0-TI-SqM" firstAttribute="trailing" secondItem="bw6-dl-Cop" secondAttribute="trailing" id="gxu-Qn-Yo0"/>
+                            <constraint firstItem="4j9-C2-1gI" firstAttribute="top" secondItem="he0-TI-SqM" secondAttribute="top" id="lMg-Zb-mID"/>
+                            <constraint firstItem="wP8-uS-qp0" firstAttribute="top" secondItem="bw6-dl-Cop" secondAttribute="bottom" id="m5s-Yq-EJL"/>
+                            <constraint firstItem="4j9-C2-1gI" firstAttribute="leading" secondItem="he0-TI-SqM" secondAttribute="leading" id="vLb-gC-No8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="he0-TI-SqM"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Me" image="me-tabIcon" selectedImage="me-tabIcon" id="VQO-Em-qGc"/>
+                    <connections>
+                        <outlet property="emailLbl" destination="NEG-WZ-F97" id="0xU-WK-TWl"/>
+                        <outlet property="profileImage" destination="6Ln-Xk-2vL" id="UJa-SR-RBP"/>
+                        <outlet property="tableView" destination="wP8-uS-qp0" id="low-Nn-eOX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VhT-Df-pPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1522" y="0.0"/>
+        </scene>
         <!--LoginVC-->
         <scene sceneID="rEu-Rb-hj1">
             <objects>
@@ -372,6 +489,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="L7i-pD-Geb" kind="relationship" relationship="viewControllers" id="Awb-Ch-MgM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -383,10 +501,13 @@
         <image name="addNewIcon" width="19" height="19"/>
         <image name="close" width="21" height="20"/>
         <image name="compose" width="21" height="24"/>
+        <image name="defaultProfileImage" width="102" height="102"/>
         <image name="emailIcon" width="25" height="16"/>
         <image name="feed-tabIcon" width="25" height="21"/>
         <image name="groups-tabIcon" width="25" height="23"/>
         <image name="loginBGImage" width="375" height="284"/>
+        <image name="logoutIcon" width="19" height="21"/>
+        <image name="me-tabIcon" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="0.015686274509803921" green="0.6705882352941176" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
 </document>
