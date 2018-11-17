@@ -6,32 +6,31 @@
 //  Copyright © 2018 K.K. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Firebase
 
-class AuthService {
-    static let instance = AuthService()
+class AuthVC: UIViewController {
     
-    func registerUser(withEmail email: String, andPassword password: String, userCreationComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            guard let user = user else {
-                userCreationComplete(false, error)
-                return
-            }
-                        // email / FB / G+
-            let userData = ["provider": user.user.providerID, "email": user.user.email]
-            DataService.instance.createDBUser(uid: user.user.uid, userData: (userData as AnyObject) as! Dictionary<String, Any>)
-            userCreationComplete(true, nil)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if Auth.auth().currentUser != nil {
+            dismiss(animated: true, completion: nil)
         }
     }
     
-    func loginUser(withEmail email: String, andPassword password: String, loginComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            if error != nil {
-                loginComplete(false, error)
-                return
-            }
-            loginComplete(true, nil)
-        }
+    @IBAction func authByEmailBtnPressed(_ sender: Any) {
+        let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginVC")
+        present(loginVC!, animated: true, completion: nil)
+    }
+    
+    @IBAction func facebookSignInBtnWasPressed(_ sender: Any) {
+    }
+    
+    @IBAction func googleSignInBtnWasPressed(_ sender: Any) {
     }
 }
+
