@@ -33,6 +33,7 @@
 		356055A421A1FDB300C284A9 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356055A321A1FDB300C284A9 /* Group.swift */; };
 		356055A621A207D400C284A9 /* _GroupFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356055A521A207D400C284A9 /* _GroupFeedTableViewCell.swift */; };
 		356055A821A2098C00C284A9 /* _GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356055A721A2098C00C284A9 /* _GroupFeedVC.swift */; };
+		356055AA21A222F700C284A9 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356055A921A222F700C284A9 /* UIViewControllerExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		356055A321A1FDB300C284A9 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		356055A521A207D400C284A9 /* _GroupFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _GroupFeedTableViewCell.swift; sourceTree = "<group>"; };
 		356055A721A2098C00C284A9 /* _GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _GroupFeedVC.swift; sourceTree = "<group>"; };
+		356055A921A222F700C284A9 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		4A5BE1AA2DBA12E3B980EE82 /* Pods-Breakpoint-Community-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakpoint-Community-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breakpoint-Community-app/Pods-Breakpoint-Community-app.release.xcconfig"; sourceTree = "<group>"; };
 		6458900038F68AFB895C0B0D /* Pods_Breakpoint_Community_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakpoint_Community_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				35605580219FC7F900C284A9 /* UIViewExt.swift */,
+				356055A921A222F700C284A9 /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				35605579219F902B00C284A9 /* AuthService.swift in Sources */,
 				351A6268219E11C3003D343A /* AppDelegate.swift in Sources */,
 				35605577219F60B300C284A9 /* ShadowView.swift in Sources */,
+				356055AA21A222F700C284A9 /* UIViewControllerExt.swift in Sources */,
 				3560557D219F9F1600C284A9 /* MeVC.swift in Sources */,
 				3560557F219FBA4800C284A9 /* CreatePostVC.swift in Sources */,
 				3560559821A0F6F400C284A9 /* _FeedVC.swift in Sources */,

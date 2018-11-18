@@ -360,7 +360,7 @@
         <!--Group FeedVC-->
         <scene sceneID="Nj3-QF-ZhN">
             <objects>
-                <viewController id="3Fj-ji-qgs" customClass="_GroupFeedVC" customModule="Breakpoint_Community_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="_GroupFeedVC" id="3Fj-ji-qgs" customClass="_GroupFeedVC" customModule="Breakpoint_Community_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S0O-fO-1XX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -402,7 +402,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cuV-aE-FRP">
-                                <rect key="frame" x="0.0" y="125" width="375" height="542"/>
+                                <rect key="frame" x="0.0" y="125" width="375" height="482"/>
                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
@@ -503,7 +503,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dkh-c3-ZUe" firstAttribute="bottom" secondItem="cuV-aE-FRP" secondAttribute="bottom" id="1k0-U0-0Sr"/>
+                            <constraint firstItem="dkh-c3-ZUe" firstAttribute="bottom" secondItem="cuV-aE-FRP" secondAttribute="bottom" constant="60" id="1k0-U0-0Sr"/>
                             <constraint firstItem="4M1-YG-u6F" firstAttribute="leading" secondItem="dkh-c3-ZUe" secondAttribute="leading" id="4Ff-hs-gci"/>
                             <constraint firstAttribute="bottom" secondItem="4M1-YG-u6F" secondAttribute="bottom" id="GSD-5N-Kun"/>
                             <constraint firstItem="1Rw-bb-MOv" firstAttribute="leading" secondItem="dkh-c3-ZUe" secondAttribute="leading" constant="10" id="Gvl-Pg-aoY"/>

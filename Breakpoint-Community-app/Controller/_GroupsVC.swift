@@ -34,18 +34,24 @@ class _GroupsVC: UIViewController {
 }
 
 extension _GroupsVC: UITableViewDelegate, UITableViewDataSource {
-        func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
-        
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return groupsArray.count
-        }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let cell = _groupsTable.dequeueReusableCell(withIdentifier: "_groupsRU", for: indexPath) as? _GroupsTableViewCell else { return UITableViewCell() }
-            let group = groupsArray[indexPath.row]
-            cell.configureCell(title: group.groupTitle, description: group.groupDesc, memberCount: group.memberCount)
-            return cell
-        }   
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return groupsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = _groupsTable.dequeueReusableCell(withIdentifier: "_groupsRU", for: indexPath) as? _GroupsTableViewCell else { return UITableViewCell() }
+        let group = groupsArray[indexPath.row]
+        cell.configureCell(title: group.groupTitle, description: group.groupDesc, memberCount: group.memberCount)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let groupFeedVC = storyboard?.instantiateViewController(withIdentifier: "_GroupFeedVC") as? _GroupFeedVC else { return }
+        groupFeedVC.initData(forGroup: groupsArray[indexPath.row])
+        presentDetail(groupFeedVC)
+    }
 }
