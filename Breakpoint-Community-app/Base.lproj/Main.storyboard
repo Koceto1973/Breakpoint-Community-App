@@ -443,10 +443,10 @@
             </objects>
             <point key="canvasLocation" x="828" y="322"/>
         </scene>
-        <!--View Controller-->
+        <!--Create GroupsVC-->
         <scene sceneID="Uxr-C3-vST">
             <objects>
-                <viewController id="o2F-II-RyM" sceneMemberID="viewController">
+                <viewController id="o2F-II-RyM" customClass="CreateGroupsVC" customModule="Breakpoint_Community_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="geU-2o-zdV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -464,6 +464,9 @@
                                         <state key="normal" title="DONE">
                                             <color key="titleColor" red="0.22047906140000001" green="1" blue="0.32262097750000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="doneBtnWasPressed:" destination="o2F-II-RyM" eventType="touchUpInside" id="Hqr-te-rmq"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_new_group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byl-2y-yCI">
                                         <rect key="frame" x="133" y="35" width="109" height="21"/>
@@ -477,6 +480,9 @@
                                             <constraint firstAttribute="width" constant="30" id="csL-Kp-iRo"/>
                                         </constraints>
                                         <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="closeBtnWasPressed:" destination="o2F-II-RyM" eventType="touchUpInside" id="4XH-vm-9Pf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -597,6 +603,14 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="8hO-TI-71F" id="igD-ul-Mya"/>
+                        <outlet property="doneBtn" destination="5nP-Ad-o3Q" id="ugl-h8-ZvB"/>
+                        <outlet property="emailSearchTextField" destination="i7j-1A-v1G" id="7fq-dG-UZA"/>
+                        <outlet property="groupMemberLbl" destination="rrk-dw-V1D" id="ljQ-cM-nMz"/>
+                        <outlet property="tableView" destination="62s-n1-sN7" id="35S-yA-Zcz"/>
+                        <outlet property="titleTextField" destination="Zbo-Ce-ehW" id="IVQ-ey-eq3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNS-BE-nuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
