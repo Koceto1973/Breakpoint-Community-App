@@ -28,7 +28,8 @@
 		3560559A21A0F71600C284A9 /* _GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560559921A0F71600C284A9 /* _GroupsVC.swift */; };
 		3560559C21A0F7E000C284A9 /* _FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560559B21A0F7E000C284A9 /* _FeedTableViewCell.swift */; };
 		3560559E21A0F82800C284A9 /* _GroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560559D21A0F82800C284A9 /* _GroupsTableViewCell.swift */; };
-		356055A021A1272800C284A9 /* CreateGroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560559F21A1272800C284A9 /* CreateGroupsVC.swift */; };
+		356055A021A1272800C284A9 /* _CreateGroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560559F21A1272800C284A9 /* _CreateGroupsVC.swift */; };
+		356055A221A1318600C284A9 /* _CreateGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356055A121A1318600C284A9 /* _CreateGroupsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +56,8 @@
 		3560559921A0F71600C284A9 /* _GroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _GroupsVC.swift; sourceTree = "<group>"; };
 		3560559B21A0F7E000C284A9 /* _FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FeedTableViewCell.swift; sourceTree = "<group>"; };
 		3560559D21A0F82800C284A9 /* _GroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _GroupsTableViewCell.swift; sourceTree = "<group>"; };
-		3560559F21A1272800C284A9 /* CreateGroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupsVC.swift; sourceTree = "<group>"; };
+		3560559F21A1272800C284A9 /* _CreateGroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _CreateGroupsVC.swift; sourceTree = "<group>"; };
+		356055A121A1318600C284A9 /* _CreateGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _CreateGroupsTableViewCell.swift; sourceTree = "<group>"; };
 		4A5BE1AA2DBA12E3B980EE82 /* Pods-Breakpoint-Community-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakpoint-Community-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breakpoint-Community-app/Pods-Breakpoint-Community-app.release.xcconfig"; sourceTree = "<group>"; };
 		6458900038F68AFB895C0B0D /* Pods_Breakpoint_Community_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakpoint_Community_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,7 +128,7 @@
 				3560557E219FBA4800C284A9 /* CreatePostVC.swift */,
 				3560559721A0F6F400C284A9 /* _FeedVC.swift */,
 				3560559921A0F71600C284A9 /* _GroupsVC.swift */,
-				3560559F21A1272800C284A9 /* CreateGroupsVC.swift */,
+				3560559F21A1272800C284A9 /* _CreateGroupsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -138,6 +140,7 @@
 				35605576219F60B300C284A9 /* ShadowView.swift */,
 				3560559B21A0F7E000C284A9 /* _FeedTableViewCell.swift */,
 				3560559D21A0F82800C284A9 /* _GroupsTableViewCell.swift */,
+				356055A121A1318600C284A9 /* _CreateGroupsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				35605581219FC7F900C284A9 /* UIViewExt.swift in Sources */,
 				351A6287219F15F9003D343A /* AuthVC.swift in Sources */,
 				3560559E21A0F82800C284A9 /* _GroupsTableViewCell.swift in Sources */,
+				356055A221A1318600C284A9 /* _CreateGroupsTableViewCell.swift in Sources */,
 				351A6289219F1615003D343A /* LoginVC.swift in Sources */,
 				3560559C21A0F7E000C284A9 /* _FeedTableViewCell.swift in Sources */,
 				3560557B219F94B600C284A9 /* AlertVC.swift in Sources */,
@@ -311,7 +315,7 @@
 				3560558C219FE7A800C284A9 /* Message.swift in Sources */,
 				351A628B219F1760003D343A /* InsetTextField.swift in Sources */,
 				351A6285219E1E55003D343A /* DataService.swift in Sources */,
-				356055A021A1272800C284A9 /* CreateGroupsVC.swift in Sources */,
+				356055A021A1272800C284A9 /* _CreateGroupsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
