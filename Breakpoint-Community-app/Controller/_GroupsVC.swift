@@ -10,24 +10,42 @@ import UIKit
 
 class _GroupsVC: UIViewController {
 
+    // Outlets
     @IBOutlet weak var _groupsTable: UITableView!
+    
+    // variables
+    var groupsArray = [Group]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         _groupsTable.delegate = self
         _groupsTable.dataSource = self
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
+            DataService.instance.getAllGroups { (returnedGroupsArray) in
+                self.groupsArray = returnedGroupsArray
+                self._groupsTable.reloadData()
+            }
+        }
+    }
 }
 
 extension _GroupsVC: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = _groupsTable.dequeueReusableCell(withIdentifier: "_groupsRU") as? _GroupsTableViewCell else { return UITableViewCell() }
+        func numberOfSections(in tableView: UITableView) -> Int {
+            return 1
+        }
         
-        return cell
-    }
-    
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return groupsArray.count
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            guard let cell = _groupsTable.dequeueReusableCell(withIdentifier: "_groupsRU", for: indexPath) as? _GroupsTableViewCell else { return UITableViewCell() }
+            let group = groupsArray[indexPath.row]
+            cell.configureCell(title: group.groupTitle, description: group.groupDesc, memberCount: group.memberCount)
+            return cell
+        }   
 }

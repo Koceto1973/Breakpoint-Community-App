@@ -379,8 +379,46 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kbv-Re-DCP" id="i2Y-Yc-6EJ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_group_title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usW-Td-7Hy">
+                                                    <rect key="frame" x="25" y="21" width="325" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_group_description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDF-Vm-uV3">
+                                                    <rect key="frame" x="35" y="50" width="315" height="14"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_group_members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbI-RU-fac">
+                                                    <rect key="frame" x="35" y="69" width="305" height="14"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eDF-Vm-uV3" firstAttribute="top" secondItem="usW-Td-7Hy" secondAttribute="bottom" constant="5" id="0Xm-Nr-axi"/>
+                                                <constraint firstItem="xbI-RU-fac" firstAttribute="top" secondItem="eDF-Vm-uV3" secondAttribute="bottom" constant="5" id="3PK-GO-QgO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eDF-Vm-uV3" secondAttribute="trailing" constant="10" id="4J2-Ay-igf"/>
+                                                <constraint firstItem="usW-Td-7Hy" firstAttribute="top" secondItem="i2Y-Yc-6EJ" secondAttribute="topMargin" constant="10" id="L9w-SM-e2y"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="usW-Td-7Hy" secondAttribute="trailing" constant="10" id="Nxl-SQ-nRh"/>
+                                                <constraint firstAttribute="bottom" secondItem="usW-Td-7Hy" secondAttribute="bottom" constant="54.5" id="SHA-8J-dil"/>
+                                                <constraint firstItem="xbI-RU-fac" firstAttribute="leading" secondItem="i2Y-Yc-6EJ" secondAttribute="leadingMargin" constant="20" id="UkH-T0-JIj"/>
+                                                <constraint firstItem="eDF-Vm-uV3" firstAttribute="top" secondItem="usW-Td-7Hy" secondAttribute="bottom" constant="5" id="bEi-04-cFi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xbI-RU-fac" secondAttribute="trailing" constant="20" id="ec9-tc-pio"/>
+                                                <constraint firstItem="usW-Td-7Hy" firstAttribute="leading" secondItem="i2Y-Yc-6EJ" secondAttribute="leadingMargin" constant="10" id="eiV-zc-7lO"/>
+                                                <constraint firstItem="eDF-Vm-uV3" firstAttribute="leading" secondItem="i2Y-Yc-6EJ" secondAttribute="leadingMargin" constant="20" id="rcR-fI-AEB"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="groupDescLbl" destination="eDF-Vm-uV3" id="tns-81-N0i"/>
+                                            <outlet property="groupTitleLbl" destination="usW-Td-7Hy" id="q8a-8M-BXM"/>
+                                            <outlet property="memberCountLbl" destination="xbI-RU-fac" id="MK7-JD-LL8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
