@@ -1,4 +1,3 @@
-//
 //  AppDelegate.swift
 //  Breakpoint-Community-app
 //

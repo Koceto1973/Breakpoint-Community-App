@@ -1,15 +1,15 @@
 //
-//  FeedCell.swift
+//  TableViewCell.swift
 //  Breakpoint-Community-app
 //
-//  Created by K.K. on 16.11.18.
+//  Created by K.K. on 17.11.18.
 //  Copyright © 2018 K.K. All rights reserved.
 //
 
 import UIKit
 
-class FeedCell: UITableViewCell {
-    
+class _FeedTableViewCell: UITableViewCell {
+
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var contentLbl: UILabel!
@@ -19,5 +19,5 @@ class FeedCell: UITableViewCell {
         self.emailLbl.text = email
         self.contentLbl.text = content
     }
-    
+
 }
