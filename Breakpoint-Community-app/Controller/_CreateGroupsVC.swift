@@ -54,10 +54,12 @@ class _CreateGroupsVC: UIViewController {
     
     @IBAction func doneBtnWasPressed(_ sender: Any) {
         if titleTextField.text != "" && descriptionTextField.text != "" {
+            // get uid array for participants
             DataService.instance.getIds(forUsernames: chosenUserArray, handler: { (idsArray) in
                 var userIds = idsArray
+                // add the current user to them
                 userIds.append((Auth.auth().currentUser?.uid)!)
-                
+                // create the group
                 DataService.instance.createGroup(withTitle: self.titleTextField.text!, andDescription: self.descriptionTextField.text!, forUserIds: userIds, handler: { (groupCreated) in
                     if groupCreated {
                         self.dismiss(animated: true, completion: nil)
@@ -99,10 +101,12 @@ extension _CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? _CreateGroupsTableViewCell else { return }
         if !chosenUserArray.contains(cell.emailLbl.text!) {
+            // adding participant
             chosenUserArray.append(cell.emailLbl.text!)
             groupMemberLbl.text = chosenUserArray.joined(separator: ", ")
             doneBtn.isHidden = false
         } else {
+            // removal of participant
             chosenUserArray = chosenUserArray.filter({ $0 != cell.emailLbl.text! })
             if chosenUserArray.count >= 1 {
                 groupMemberLbl.text = chosenUserArray.joined(separator: ", ")
