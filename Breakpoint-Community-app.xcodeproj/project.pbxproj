@@ -31,6 +31,8 @@
 		356055A021A1272800C284A9 /* _CreateGroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560559F21A1272800C284A9 /* _CreateGroupsVC.swift */; };
 		356055A221A1318600C284A9 /* _CreateGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356055A121A1318600C284A9 /* _CreateGroupsTableViewCell.swift */; };
 		356055A421A1FDB300C284A9 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356055A321A1FDB300C284A9 /* Group.swift */; };
+		356055A621A207D400C284A9 /* _GroupFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356055A521A207D400C284A9 /* _GroupFeedTableViewCell.swift */; };
+		356055A821A2098C00C284A9 /* _GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356055A721A2098C00C284A9 /* _GroupFeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		3560559F21A1272800C284A9 /* _CreateGroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _CreateGroupsVC.swift; sourceTree = "<group>"; };
 		356055A121A1318600C284A9 /* _CreateGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _CreateGroupsTableViewCell.swift; sourceTree = "<group>"; };
 		356055A321A1FDB300C284A9 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		356055A521A207D400C284A9 /* _GroupFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _GroupFeedTableViewCell.swift; sourceTree = "<group>"; };
+		356055A721A2098C00C284A9 /* _GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _GroupFeedVC.swift; sourceTree = "<group>"; };
 		4A5BE1AA2DBA12E3B980EE82 /* Pods-Breakpoint-Community-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakpoint-Community-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breakpoint-Community-app/Pods-Breakpoint-Community-app.release.xcconfig"; sourceTree = "<group>"; };
 		6458900038F68AFB895C0B0D /* Pods_Breakpoint_Community_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakpoint_Community_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +135,7 @@
 				3560559721A0F6F400C284A9 /* _FeedVC.swift */,
 				3560559921A0F71600C284A9 /* _GroupsVC.swift */,
 				3560559F21A1272800C284A9 /* _CreateGroupsVC.swift */,
+				356055A721A2098C00C284A9 /* _GroupFeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				3560559B21A0F7E000C284A9 /* _FeedTableViewCell.swift */,
 				3560559D21A0F82800C284A9 /* _GroupsTableViewCell.swift */,
 				356055A121A1318600C284A9 /* _CreateGroupsTableViewCell.swift */,
+				356055A521A207D400C284A9 /* _GroupFeedTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 				35605581219FC7F900C284A9 /* UIViewExt.swift in Sources */,
 				351A6287219F15F9003D343A /* AuthVC.swift in Sources */,
 				3560559E21A0F82800C284A9 /* _GroupsTableViewCell.swift in Sources */,
+				356055A821A2098C00C284A9 /* _GroupFeedVC.swift in Sources */,
 				356055A221A1318600C284A9 /* _CreateGroupsTableViewCell.swift in Sources */,
 				351A6289219F1615003D343A /* LoginVC.swift in Sources */,
 				3560559C21A0F7E000C284A9 /* _FeedTableViewCell.swift in Sources */,
@@ -320,6 +327,7 @@
 				351A628B219F1760003D343A /* InsetTextField.swift in Sources */,
 				351A6285219E1E55003D343A /* DataService.swift in Sources */,
 				356055A021A1272800C284A9 /* _CreateGroupsVC.swift in Sources */,
+				356055A621A207D400C284A9 /* _GroupFeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
