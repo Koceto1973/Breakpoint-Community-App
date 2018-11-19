@@ -30,8 +30,14 @@ class _GroupFeedVC: UIViewController {
         super.viewDidLoad()
         sendBtnView.bindToKeyboard()
         messageTextField.delegate = self
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        // keyboard dismiss
+        let tapper = UITapGestureRecognizer(target: self, action:#selector(dismissKeyboard))
+        tapper.cancelsTouchesInView = false
+        tableView.addGestureRecognizer(tapper)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -101,4 +107,13 @@ extension _GroupFeedVC: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        messageTextField.resignFirstResponder()
+    }
 }
+
+
+
+
+
+

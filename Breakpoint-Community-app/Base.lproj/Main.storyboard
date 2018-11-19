@@ -388,6 +388,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
+                                            <action selector="backBtnWasPressed:" destination="3Fj-ji-qgs" eventType="touchUpInside" id="6cK-bB-a5i"/>
                                             <action selector="closeBtnWasPressed:" destination="o2F-II-RyM" eventType="touchUpInside" id="mSc-kn-PXD"/>
                                         </connections>
                                     </button>
@@ -488,6 +489,9 @@
                                             <constraint firstAttribute="height" constant="30" id="v2q-oD-1rt"/>
                                         </constraints>
                                         <state key="normal" image="send"/>
+                                        <connections>
+                                            <action selector="sendBtnWasPressed:" destination="3Fj-ji-qgs" eventType="touchUpInside" id="KI5-AR-FjD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
