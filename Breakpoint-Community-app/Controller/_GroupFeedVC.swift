@@ -18,7 +18,9 @@ class _GroupFeedVC: UIViewController {
     @IBOutlet weak var sendBtnView: UIView!
     @IBOutlet weak var messageTextField: InsetTextField!
     @IBOutlet weak var sendBtn: UIButton!
+    @IBOutlet weak var messageViewBottomConstraint: NSLayoutConstraint!
     
+    // Variables
     var group: Group?
     var groupMessages = [Message]()
     
@@ -28,7 +30,11 @@ class _GroupFeedVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        sendBtnView.bindToKeyboard()
+        
+        // sendBtnView.bindToKeyboard()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil )
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil )
+        
         messageTextField.delegate = self
         
         tableView.delegate = self
@@ -42,6 +48,8 @@ class _GroupFeedVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        messageViewBottomConstraint.constant = 0.0
+        
         groupTitleLbl.text = group?.groupTitle
         DataService.instance.getEmailsFor(group: group!) { (returnedEmails) in
             self.membersLbl.text = returnedEmails.joined(separator: ", ")
@@ -57,6 +65,12 @@ class _GroupFeedVC: UIViewController {
                 }
             })
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     @IBAction func sendBtnWasPressed(_ sender: Any) {
@@ -99,6 +113,17 @@ extension _GroupFeedVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension _GroupFeedVC: UITextFieldDelegate {
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            messageViewBottomConstraint.constant = keyboardFrame.cgRectValue.height
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        messageViewBottomConstraint.constant = 0.0
+    }
+    
     // keybord dismissal
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
