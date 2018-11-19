@@ -28,9 +28,11 @@ class AuthVC: UIViewController {
     }
     
     @IBAction func facebookSignInBtnWasPressed(_ sender: Any) {
+        // todo
     }
     
     @IBAction func googleSignInBtnWasPressed(_ sender: Any) {
+        // todo
     }
 }
 
